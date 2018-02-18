@@ -1,0 +1,77 @@
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-secondary;
+}
+
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  [class^="col-"] {
+    float: left;
+
+  }
+}
+
+.col-1-of-2 {
+  width: calc(100%/2);
+}
+
+.header {
+  background-color: #1a3b69;
+
+  a:visited,
+  a:link {
+      text-decoration: none;
+      color: white;
+      font-size: 3rem;
+  }
+}
+
+.login-information {
+    text-align: right;
+
+    a:visited,
+    a:link {
+      font-size: 1.8rem;
+    }
+  }
+
+
+.dataTables_wrapper {
+  width: 100%;
+}
+
+.information-section, .order-section {
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  width: 100%;
+  background-color: #1a3b69;
+  color: white;
+  padding: 1rem;
+}
